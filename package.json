@@ -1,0 +1,70 @@
+{
+  "name": "sundalang-vscode-extension",
+  "displayName": "SundaLang Programming Languages Sunda Pandeglang Extension",
+  "description": "Syntax highlighting for the Sunda Pandeglang Programming language",
+  "version": "1.0.0",
+  "publisher": "bromanprjkt",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:sundalang"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "sundalang",
+        "aliases": [
+          "SundaLang",
+          "sundalang"
+        ],
+        "extensions": [
+          ".sl",
+          ".sunda"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sundalang",
+        "scopeName": "source.sunda",
+        "path": "./syntaxes/sundalang.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "sundalang.runFile",
+        "title": "SundaLang: Run File"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "sundalang.runFile",
+          "when": "resourceLangId == sundalang",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/broman0x/sundalang-extension-vscode"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.x",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^4.9.0"
+  }
+}

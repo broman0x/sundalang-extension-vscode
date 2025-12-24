@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "SundaLang",
+  "scopeName": "source.sunda",
+  "patterns": [
+    {
+      "name": "comment.line.number-sign.sunda",
+      "match": "#.*$"
+    },
+    {
+      "name": "string.quoted.double.sunda",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.sunda",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "keyword.control.sunda",
+      "match": "\\b(lamun|lamunteu|kedap|balik)\\b"
+    },
+    {
+      "name": "storage.type.sunda",
+      "match": "\\b(tanda|fungsi)\\b"
+    },
+    {
+      "name": "keyword.other.io.sunda",
+      "match": "\\b(cetakkeun|tanyakeun)\\b"
+    },
+    {
+      "name": "constant.language.boolean.sunda",
+      "match": "\\b(bener|salah)\\b"
+    },
+    {
+      "name": "support.function.builtin.sunda",
+      "match": "\\b(panjang|mimiti|tungtung|asupkeun|garede|laleutik|kana_angka|kana_tulisan|tipe)\\b"
+    },
+    {
+      "name": "constant.numeric.integer.sunda",
+      "match": "\\b\\d+\\b"
+    },
+    {
+      "name": "keyword.operator.sunda",
+      "match": "(\\|\\||&&|==|!=|<=|>=|[+\\-*/%<>=!])"
+    },
+    {
+      "name": "punctuation.section.sunda",
+      "match": "[\\{\\}\\[\\]\\(\\)\\,\\;\\:]"
+    },
+    {
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(",
+      "captures": {
+        "1": { "name": "entity.name.function.sunda" }
+      }
+    },
+    {
+      "name": "variable.other.sunda",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+    },
+    {
+      "name": "invalid.illegal.sunda",
+      "match": "."
+    }
+  ]
+}
