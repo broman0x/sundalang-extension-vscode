@@ -14,7 +14,18 @@
       "patterns": [
         {
           "name": "constant.character.escape.sunda",
-          "match": "\\\\."
+          "match": "\\\\(n|t|r|\\\\|\")"
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.single.sunda",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.sunda",
+          "match": "\\\\(n|t|r|\\\\|')"
         }
       ]
     },
@@ -36,33 +47,70 @@
     },
     {
       "name": "support.function.builtin.sunda",
-      "match": "\\b(panjang|mimiti|tungtung|asupkeun|garede|laleutik|kana_angka|kana_tulisan|tipe)\\b"
+      "match": "\\b(panjang|mimiti|tungtung|asupkeun|garede|laleutik|kana_angka|kana_tulisan|tipe|sare|reureuh)\\b"
+    },
+    {
+      "name": "constant.numeric.float.sunda",
+      "match": "\\b\\d+\\.\\d+\\b"
     },
     {
       "name": "constant.numeric.integer.sunda",
       "match": "\\b\\d+\\b"
     },
     {
-      "name": "keyword.operator.sunda",
-      "match": "(\\|\\||&&|==|!=|<=|>=|[+\\-*/%<>=!])"
+      "name": "keyword.operator.logical.sunda",
+      "match": "(\\|\\||&&|!)"
     },
     {
-      "name": "punctuation.section.sunda",
-      "match": "[\\{\\}\\[\\]\\(\\)\\,\\;\\:]"
+      "name": "keyword.operator.comparison.sunda",
+      "match": "(==|!=|<=|>=|<|>)"
+    },
+    {
+      "name": "keyword.operator.arithmetic.sunda",
+      "match": "([+\\-*/%])"
+    },
+    {
+      "name": "keyword.operator.assignment.sunda",
+      "match": "(=)"
+    },
+    {
+      "name": "punctuation.section.braces.sunda",
+      "match": "[\\{\\}]"
+    },
+    {
+      "name": "punctuation.section.brackets.sunda",
+      "match": "[\\[\\]]"
+    },
+    {
+      "name": "punctuation.section.parens.sunda",
+      "match": "[\\(\\)]"
+    },
+    {
+      "name": "punctuation.separator.sunda",
+      "match": "[\\,\\;\\:]"
     },
     {
       "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(",
       "captures": {
-        "1": { "name": "entity.name.function.sunda" }
+        "1": {
+          "name": "entity.name.function.sunda"
+        }
+      }
+    },
+    {
+      "match": "\\b(fungsi)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+      "captures": {
+        "1": {
+          "name": "storage.type.sunda"
+        },
+        "2": {
+          "name": "entity.name.function.definition.sunda"
+        }
       }
     },
     {
       "name": "variable.other.sunda",
       "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
-    },
-    {
-      "name": "invalid.illegal.sunda",
-      "match": "."
     }
   ]
 }

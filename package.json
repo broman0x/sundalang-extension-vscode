@@ -1,8 +1,8 @@
 {
   "name": "sundalang-vscode-extension",
-  "displayName": "SundaLang Programming Languages Sunda Pandeglang Extension",
-  "description": "Syntax highlighting for the Sunda Pandeglang Programming language",
-  "version": "1.0.0",
+  "displayName": "SundaLang - Bahasa Pemrograman Sunda Pandeglang",
+  "description": "VS Code extension for SundaLang: syntax highlighting, IntelliSense, snippets for Sunda programming language",
+  "version": "1.0.1",
   "publisher": "bromanprjkt",
   "icon": "logo.png",
   "engines": {
@@ -10,9 +10,6 @@
   },
   "categories": [
     "Programming Languages"
-  ],
-  "activationEvents": [
-    "onLanguage:sundalang"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -37,10 +34,25 @@
         "path": "./syntaxes/sundalang.tmLanguage.json"
       }
     ],
+    "snippets": [
+      {
+        "language": "sundalang",
+        "path": "./snippets/sundalang.json"
+      }
+    ],
     "commands": [
       {
         "command": "sundalang.runFile",
-        "title": "SundaLang: Run File"
+        "title": "SundaLang: Run File",
+        "icon": "$(play)"
+      },
+      {
+        "command": "sundalang.newFile",
+        "title": "SundaLang: New File from Template"
+      },
+      {
+        "command": "sundalang.openRepl",
+        "title": "SundaLang: Open REPL"
       }
     ],
     "menus": {
@@ -50,8 +62,27 @@
           "when": "resourceLangId == sundalang",
           "group": "navigation"
         }
+      ],
+      "editor/title/run": [
+        {
+          "command": "sundalang.runFile",
+          "when": "resourceLangId == sundalang"
+        }
       ]
-    }
+    },
+    "keybindings": [
+      {
+        "command": "sundalang.runFile",
+        "key": "f5",
+        "when": "resourceLangId == sundalang"
+      },
+      {
+        "command": "sundalang.runFile",
+        "key": "ctrl+r",
+        "mac": "cmd+r",
+        "when": "resourceLangId == sundalang"
+      }
+    ]
   },
   "repository": {
     "type": "git",
