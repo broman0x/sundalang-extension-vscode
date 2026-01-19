@@ -1,6 +1,6 @@
 # SundaLang for VS Code
 
-[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/broman0x/sundalang-extension-vscode)
+[![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://github.com/broman0x/sundalang-extension-vscode)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 **VS Code extension untuk SundaLang (Bahasa Pemrograman Sunda Pandeglang)**
@@ -109,7 +109,15 @@ cetakkeun(tungtung(daftar))
 
 ## 📝 Changelog
 
-### v1.0.1 (Latest)
+### v1.0.2 (Latest)
+- ✅ **Synced**: 100% Keyword & Function sync dengan core `pkg/sundalang` v1.0.4.
+- ✅ **New Keywords**: `pikeun`, `milih`, `cobaan/sanya`, `buka`, `wadah`, `tetep`.
+- ✅ **New Functions**: `waktu`, `acak`, `sare`, `reureuh`, `maca`, `nyerat`.
+- ✅ **Comments**: Support gaya `//` (C-style) jeung `#` (Shell-style).
+- ✅ **Clean Code**: Konfigurasi bersih tanpa komentar internal.
+- ✅ **Icon**: File icon `.sl` ayeuna nganggo logo SundaLang.
+
+### v1.0.1
 - ✅ Syntax highlighting untuk 10 keywords + 11 builtin functions
 - ✅ IntelliSense autocomplete
 - ✅ 21 code snippets
