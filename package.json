@@ -2,7 +2,7 @@
   "name": "sundalang-vscode-extension",
   "displayName": "SundaLang - Bahasa Pemrograman Sunda Pandeglang",
   "description": "VS Code extension for SundaLang: syntax highlighting, IntelliSense, snippets for Sunda programming language",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "bromanprjkt",
   "icon": "logo.png",
   "engines": {
