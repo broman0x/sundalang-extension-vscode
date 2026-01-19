@@ -4,6 +4,10 @@
   "scopeName": "source.sunda",
   "patterns": [
     {
+      "name": "comment.line.double-slash.sunda",
+      "match": "//.*$"
+    },
+    {
       "name": "comment.line.number-sign.sunda",
       "match": "#.*$"
     },
@@ -19,86 +23,35 @@
       ]
     },
     {
-      "name": "string.quoted.single.sunda",
-      "begin": "'",
-      "end": "'",
-      "patterns": [
-        {
-          "name": "constant.character.escape.sunda",
-          "match": "\\\\(n|t|r|\\\\|')"
-        }
-      ]
-    },
-    {
       "name": "keyword.control.sunda",
-      "match": "\\b(lamun|lamunteu|kedap|balik)\\b"
+      "match": "\\b(lamun|lamunteu|pikeun|kedap|eureun|tuluy|milih|kasus|baku|balik|balikkeun|cobaan|sanya|buka)\\b"
     },
     {
       "name": "storage.type.sunda",
-      "match": "\\b(tanda|fungsi)\\b"
+      "match": "\\b(tanda|tetep|pungsi|fungsi|wadah)\\b"
     },
     {
-      "name": "keyword.other.io.sunda",
-      "match": "\\b(cetakkeun|tanyakeun)\\b"
+      "name": "support.function.builtin.sunda",
+      "match": "\\b(cetakkeun|tanyakeun|panjang|mimiti|tungtung|asupkeun|garede|laleutik|kana_angka|kana_tulisan|tipe|waktu|acak|sare|reureuh|maca|nyerat)\\b"
     },
     {
       "name": "constant.language.boolean.sunda",
       "match": "\\b(bener|salah)\\b"
     },
     {
-      "name": "support.function.builtin.sunda",
-      "match": "\\b(panjang|mimiti|tungtung|asupkeun|garede|laleutik|kana_angka|kana_tulisan|tipe|sare|reureuh)\\b"
-    },
-    {
-      "name": "constant.numeric.float.sunda",
-      "match": "\\b\\d+\\.\\d+\\b"
+      "name": "constant.language.null.sunda",
+      "match": "\\b(ewehan)\\b"
     },
     {
       "name": "constant.numeric.integer.sunda",
       "match": "\\b\\d+\\b"
     },
     {
-      "name": "keyword.operator.logical.sunda",
-      "match": "(\\|\\||&&|!)"
+      "name": "keyword.operator.sunda",
+      "match": "(\\+|\\-|\\*|\\/|%|==|!=|<|>|<=|>=|=|!|&&|\\|\\|)"
     },
     {
-      "name": "keyword.operator.comparison.sunda",
-      "match": "(==|!=|<=|>=|<|>)"
-    },
-    {
-      "name": "keyword.operator.arithmetic.sunda",
-      "match": "([+\\-*/%])"
-    },
-    {
-      "name": "keyword.operator.assignment.sunda",
-      "match": "(=)"
-    },
-    {
-      "name": "punctuation.section.braces.sunda",
-      "match": "[\\{\\}]"
-    },
-    {
-      "name": "punctuation.section.brackets.sunda",
-      "match": "[\\[\\]]"
-    },
-    {
-      "name": "punctuation.section.parens.sunda",
-      "match": "[\\(\\)]"
-    },
-    {
-      "name": "punctuation.separator.sunda",
-      "match": "[\\,\\;\\:]"
-    },
-    {
-      "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(",
-      "captures": {
-        "1": {
-          "name": "entity.name.function.sunda"
-        }
-      }
-    },
-    {
-      "match": "\\b(fungsi)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+      "match": "\\b(pungsi|fungsi)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
       "captures": {
         "1": {
           "name": "storage.type.sunda"
@@ -109,8 +62,12 @@
       }
     },
     {
-      "name": "variable.other.sunda",
-      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(",
+      "captures": {
+        "1": {
+          "name": "entity.name.function.sunda"
+        }
+      }
     }
   ]
 }
